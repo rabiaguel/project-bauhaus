@@ -1,0 +1,3 @@
+---
+title: "Staatliches Bauhaus"
+---
