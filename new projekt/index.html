@@ -4,121 +4,260 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staatliches Bauhaus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', Arial, sans-serif !important;
+        }
+    </style>
 </head>
 <body>
 
     <nav class="top-nav">
-        <a href="about.html" class="about-btn">About</a>
+        <a href="about.html" class="about-btn">Über uns</a>
     </nav>
 
     <header class="main-header">
-        <h1>BAUHAUS</h1>
+        <div class="header-content">
+            <h1>bauhaus</h1>
+            <div class="logo-shapes">
+                <div class="logo-circle"></div>
+                <div class="logo-square"></div>
+                <div class="logo-triangle"></div>
+            </div>
+        </div>
     </header>
 
     <main class="content-wrapper">
-        
         <div class="intro-text">
             Das Staatliche Bauhaus wurde 1919 von Walter Gropius in Weimar als Kunstschule gegründet. Es galt und gilt bis heute als die einflussreichste Bildungsstätte im Bereich der Architektur, Kunst und des Designs im 20. Jahrhundert, die das Prinzip „Form folgt Funktion“ radikal etablierte.
         </div>
 
-        <h2 class="section-title title-phases">DIE PHASEN DES BAUHAUSES</h2>
-        <div class="grid-container">
-            <section class="card phase-weimar">
-                <div class="image-container">
-                    <img src="images/weimar.jpg" alt="Weimar">
+        <div class="section-container">
+            <div class="bg-shape shape-circle"></div>
+            <h2 class="section-title">DIE PHASEN DES BAUHAUSES</h2>
+            <div class="grid-container">
+                <div class="card phase-weimar" onclick="document.getElementById('modal-weimar').showModal()">
+                    <div class="image-container"><img src="images/weimar.jpg" alt="Weimar"></div>
+                    <div class="card-content">
+                        <h3>Bauhaus in Weimar (1919–1925)</h3>
+                        <p>Die Gründung des Bauhauses durch Walter Gropius markiert den Beginn einer radikalen Transformation.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Bauhaus in Weimar (1919–1925)</h3>
-                    <p>Die Gründung des Bauhauses durch Walter Gropius in Weimar markiert den Beginn einer radikalen Transformation. Hier stand die Zusammenführung von traditionellem Handwerk und moderner Kunst im Fokus.</p>
+                <div class="card phase-dessau" onclick="document.getElementById('modal-dessau').showModal()">
+                    <div class="image-container"><img src="images/dessau.jpg" alt="Dessau"></div>
+                    <div class="card-content">
+                        <h3>Bauhaus in Dessau (1925–1932)</h3>
+                        <p>Nach dem Umzug nach Dessau erlebte das Bauhaus seine produktivste Ära.</p>
+                    </div>
                 </div>
-            </section>
-            <section class="card phase-dessau">
-                <div class="image-container">
-                    <img src="images/dessau.jpg" alt="Dessau">
+                <div class="card phase-berlin" onclick="document.getElementById('modal-berlin').showModal()">
+                    <div class="image-container"><img src="images/berlin.jpg" alt="Berlin"></div>
+                    <div class="card-content">
+                        <h3>Das Berliner Finale (1932–1933)</h3>
+                        <p>Unter der Leitung von Mies van der Rohe zog das Bauhaus nach Berlin.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Bauhaus in Dessau (1925–1932)</h3>
-                    <p>Nach dem Umzug nach Dessau erlebte das Bauhaus seine produktivste Ära. Das weltberühmte Bauhaus-Gebäude verkörpert puren Funktionalismus.</p>
-                </div>
-            </section>
-            <section class="card phase-berlin">
-                <div class="image-container">
-                    <img src="images/berlin.jpg" alt="Berlin">
-                </div>
-                <div class="card-content">
-                    <h3>Das Berliner Finale (1932–1933)</h3>
-                    <p>Unter der Leitung von Ludwig Mies van der Rohe zog das Bauhaus nach Berlin. Trotz des Drucks verbreiteten die Emigranten die Ideen weltweit.</p>
-                </div>
-            </section>
+            </div>
         </div>
 
-        <h2 class="section-title title-meister">DIE MEISTER</h2>
-        <div class="grid-container">
-            <section class="master-card">
-                <div class="master-image-container">
-                    <img src="images/gropius.jpg" alt="Walter Gropius">
+        <div class="section-container">
+            <div class="bg-shape shape-square"></div>
+            <h2 class="section-title">DIE MEISTER</h2>
+            <div class="grid-container">
+                <div class="master-card" onclick="document.getElementById('modal-gropius').showModal()">
+                    <div class="master-image-container"><img src="images/gropius.jpg" alt="Walter Gropius"></div>
+                    <div class="master-content">
+                        <span class="master-role">Gründungsdirektor</span>
+                        <h3>Walter Gropius</h3>
+                        <p>Der Visionär, der Kunst und Handwerk verschmelzen ließ.</p>
+                    </div>
                 </div>
-                <div class="master-content">
-                    <span class="master-role">Gründungsdirektor</span>
-                    <h3>Walter Gropius</h3>
-                    <p>Der Visionär, der Kunst und Handwerk verschmelzen ließ. Er schuf das Fundament des modernen Designs.</p>
+                <div class="master-card" onclick="document.getElementById('modal-meyer').showModal()">
+                    <div class="master-image-container"><img src="images/meyer.jpg" alt="Hannes Meyer"></div>
+                    <div class="master-content">
+                        <span class="master-role">Zweiter Direktor</span>
+                        <h3>Hannes Meyer</h3>
+                        <p>Er stellte die sozialen Bedürfnisse in den Vordergrund.</p>
+                    </div>
                 </div>
-            </section>
-            <section class="master-card">
-                <div class="master-image-container">
-                    <img src="images/meyer.jpg" alt="Hannes Meyer">
+                <div class="master-card" onclick="document.getElementById('modal-mies').showModal()">
+                    <div class="master-image-container"><img src="images/mies.jpg" alt="Ludwig Mies van der Rohe"></div>
+                    <div class="master-content">
+                        <span class="master-role">Letzter Direktor</span>
+                        <h3>Ludwig Mies van der Rohe</h3>
+                        <p>Der Meister des Minimalismus: „Weniger ist mehr“.</p>
+                    </div>
                 </div>
-                <div class="master-content">
-                    <span class="master-role">Zweiter Direktor</span>
-                    <h3>Hannes Meyer</h3>
-                    <p>Er stellte die sozialen Bedürfnisse in den Vordergrund: „Volksbedarf statt Luxusbedarf“.</p>
-                </div>
-            </section>
-            <section class="master-card">
-                <div class="master-image-container">
-                    <img src="images/mies.jpg" alt="Ludwig Mies van der Rohe">
-                </div>
-                <div class="master-content">
-                    <span class="master-role">Letzter Direktor</span>
-                    <h3>Ludwig Mies van der Rohe</h3>
-                    <p>Der Meister des Minimalismus. Mit seinem Prinzip „Weniger ist mehr“ prägte er die Architektur.</p>
-                </div>
-            </section>
+            </div>
         </div>
 
-        <h2 class="section-title title-werke">WICHTIGE WERKE</h2>
-        <div class="grid-container">
-            <section class="card">
-                <div class="image-container">
-                    <img src="images/wagenfeld-lampe.jpg" alt="Wagenfeld-Lampe">
+        <div class="section-container">
+            <div class="bg-shape shape-triangle"></div>
+            <h2 class="section-title">WICHTIGE WERKE</h2>
+            <div class="grid-container">
+                <div class="card" onclick="document.getElementById('modal-lampe').showModal()">
+                    <div class="image-container"><img src="images/wagenfeld-lampe.jpg" alt="Wagenfeld-Lampe"></div>
+                    <div class="card-content">
+                        <h3>Wagenfeld-Lampe (1924)</h3>
+                        <p>Ein absoluter Klassiker des Produktdesigns von Wilhelm Wagenfeld.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Wagenfeld-Lampe (1924)</h3>
-                    <p>Ein absoluter Klassiker des Produktdesigns von Wilhelm Wagenfeld. Diese zeitlose Tischleuchte vereint Glas und Metall in einer rein funktionalen, geometrischen Form.</p>
+                <div class="card" onclick="document.getElementById('modal-stuhl').showModal()">
+                    <div class="image-container"><img src="images/wassily-stuhl.jpg" alt="Wassily-Stuhl"></div>
+                    <div class="card-content">
+                        <h3>Wassily-Stuhl (1925)</h3>
+                        <p>Der von Marcel Breuer entworfene Sessel revolutionierte den Möbelbau.</p>
+                    </div>
                 </div>
-            </section>
-            <section class="card">
-                <div class="image-container">
-                    <img src="images/wassily-stuhl.jpg" alt="Wassily-Stuhl">
+                <div class="card" onclick="document.getElementById('modal-schach').showModal()">
+                    <div class="image-container"><img src="images/bauhaus-schach.jpg" alt="Bauhaus-Schachspiel"></div>
+                    <div class="card-content">
+                        <h3>Bauhaus-Schachspiel (1923)</h3>
+                        <p>Gestaltet von Josef Hartwig. Form erklärt die Funktion.</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Wassily-Stuhl (1925)</h3>
-                    <p>Der von Marcel Breuer entworfene Sessel aus nahtlosem Stahlrohr revolutionierte den modernen Möbelbau. Er steht für industrielle Leichtigkeit und pure Ästhetik.</p>
-                </div>
-            </section>
-            <section class="card">
-                <div class="image-container">
-                    <img src="images/bauhaus-schach.jpg" alt="Bauhaus-Schachspiel">
-                </div>
-                <div class="card-content">
-                    <h3>Bauhaus-Schachspiel (1923)</h3>
-                    <p>Gestaltet von Josef Hartwig. Die kubischen Figuren erklären durch ihre geometrische Form direkt ihre optische und strategische Bewegungsrichtung im Spiel.</p>
-                </div>
-            </section>
+            </div>
         </div>
-
     </main>
+
+    <dialog id="modal-weimar" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Bauhaus in Weimar (1919–1925)</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media">
+                <div class="modal-box"><img src="images/weimar.jpg"><span>Historisch</span></div>
+                <div class="modal-box"><img src="images/weimar-heute.jpg"><span>Heute</span></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Historischer Kontext:</strong> Nach dem Ersten Weltkrieg gründete Walter Gropius das Staatliche Bauhaus in Weimar. Durch die Zusammenlegung der Großherzoglich-Sächsischen Kunstgewerbeschule und der Großherzoglich-Sächsischen Hochschule für Bildende Kunst entstand eine völlig neue Bildungseinrichtung. In dieser experimentellen Frühphase lag der Fokus stark auf dem handwerklichen Fundament und einer spirituell-künstlerischen Sinnsuche, die von Meistern wie Johannes Itten und Wassily Kandinsky geprägt wurde.</p>
+                <p><strong>Wichtige Entwicklungen:</strong> Hier wurde der berühmte Vorkurs ins Leben gerufen, der traditionelle Barrieren zwischen Kunst und Handwerk niederriss. Im Jahr 1923 markierte die erste große Bauhaus-Ausstellung mit dem Prototyp „Haus am Horn“ den historischen Wendepunkt hin zur industriellen Formgestaltung und funktionalen Ästhetik.</p>
+                <p><strong>Heutiger Status:</strong> Die historischen Stätten in Weimar, darunter das Hauptgebäude der heutigen Bauhaus-Universität Weimar und das Haus am Horn, gehören seit 1996 zum UNESCO-Weltkulturerbe. Das neu errichtete Bauhaus-Museum Weimar präsentiert heute die umfassende Sammlung dieser prägenden Gründungsjahre.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-dessau" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Bauhaus in Dessau (1925–1932)</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media">
+                <div class="modal-box"><img src="images/dessau.jpg"><span>Historisch</span></div>
+                <div class="modal-box"><img src="images/dessau-heute.jpg"><span>Heute</span></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Historischer Kontext:</strong> Aufgrund politischer Verschiebungen und schwindender finanzieller Unterstützung im konservativen Weimar zog das Bauhaus 1925 in das aufstrebende industrielle Dessau um. Diese Phase gilt als die absolute Blütezeit und die produktivste Ära der Institution. Das von Walter Gropius entworfene, weltberühmte Bauhausgebäude mit seiner ikonischen Glasvorhangfassade wurde zum baulichen Manifest der architektonischen Moderne.</p>
+                <p><strong>Wichtige Entwicklungen:</strong> In Dessau löste sich das Bauhaus endgültig von romantischen Handwerksidealen und verschrieb sich der seriellen Massenproduktion für eine moderne Gesellschaft. In dieser Zeit entstanden auch die bekannten Meisterhäuser für die Lehrenden sowie die wegweisende Laubenganghäuser-Siedlung.</p>
+                <p><strong>Heutiger Status:</strong> Das Dessauer Bauhausgebäude und die Meisterhäuser sind architektonische Pilgerstätten und Teil des UNESCO-Weltkulturerbes. Die Stiftung Bauhaus Dessau agiert heute als lebendiges Forschungs-, Gestaltungs- und Ausstellungszentrum, ergänzt durch das moderne Bauhaus Museum Dessau im Stadtzentrum.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-berlin" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Das Berliner Finale (1932–1933)</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media">
+                <div class="modal-box"><img src="images/berlin.jpg"><span>Historisch</span></div>
+                <div class="modal-box"><img src="images/berlin-heute.jpg"><span>Heute</span></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Historischer Kontext:</strong> Nach der Schließung des Standorts Dessau durch die Nationalsozialisten im Jahr 1932 versuchte der Subdivision-Direktor, Ludwig Mies van der Rohe, die Schule als rein private Institution in Berlin zu retten. Das neue Quartier wurde in einer stillgelegten Telefonfabrik in Berlin-Steglitz eingerichtet. Unter enormem politischen und ideologischen Druck stand das Überleben della Schule täglich auf dem Spiel.</p>
+                <p><strong>Wichtige Entwicklungen:</strong> In dieser dramatischen Endphase wurde das Bauhaus almost ausschließlich als avantgardistische Architekturschule weitergeführt. Trotz der extrem kurzen Zeitspanne festigte die Berliner Phase den kompromisslosen modernistischen Geist, den die Emigranten kurz darauf weltweit verbreiteten.</p>
+                <p><strong>Heutiger Status:</strong> Im April 1933 wurde das Gebäude von der Geheimen Staatspolizei durchsucht und versiegelt; im Juli 1933 beschloss das Lehrkörperkollegium die endgültige Selbstauflösung. Das monumentale Erbe und die Dokumentation dieser Epoche werden heute im Bauhaus-Archiv / Museum für Gestaltung in Berlin bewahrt.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-gropius" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Walter Gropius – Der Visionär</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media single-media">
+                <div class="modal-box"><img src="images/gropius.jpg"></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Direktion und Philosophie (1919–1928):</strong> Als Gründungsdirektor formulierte Walter Gropius das radikale Bauhaus-Manifest, das eine völlig neue Einheit von Kunst, Architektur und Handwerk forderte. Er war der strategische Kopf, der es schaffte, die unterschiedlichsten avantgardistischen Strömungen und Genies seiner Zeit unter einem Dach zu vereinen.</p>
+                <p><strong>Wegweisender Einfluss:</strong> Seine Entwürfe für das Dessauer Bauhausgebäude und die Meisterhäuser setzten weltweit neue Maßstäbe für die funktionale Architektur. Nach seiner Emigration in die USA im Jahr 1937 leitete er die Architekturabteilung della renommierten Harvard University und prägte Generationen internationaler Architekten im Sinne des International Style.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-meyer" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Hannes Meyer – Der Pragmatiker</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media single-media">
+                <div class="modal-box"><img src="images/meyer.jpg"></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Direktion und Philosophie (1928–1930):</strong> Der Schweizer Architekt Hannes Meyer übernahm die Leitung nach Gropius' Rücktritt und lenkte das Bauhaus in eine radikal wissenschaftliche, ökonomische und soziale Richtung. Sein unumstößliches Credo lautete: „Volksbedarf statt Luxusbedarf“. Er stellte die realen Lebensbedürfnisse der arbeitenden Bevölkerung konsequent vor rein ästhetische Experimente.</p>
+                <p><strong>Wegweisender Einfluss:</strong> Unter seiner Führung professionalisierte sich die Architekturausbildung erheblich, und das Bauhaus erzielte durch erfolgreiche Industriekooperationen erstmals echte Gewinne. Sein bedeutendstes architektonisches Werk aus dieser Zeit ist die Bundesschule des Allgemeinen Deutschen Gewerkschaftsbundes (ADGB) in Bernau, die heute ebenfalls zum UNESCO-Weltkulturerbe zählt.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-mies" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Ludwig Mies van der Rohe – Der Ästhet</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media single-media">
+                <div class="modal-box"><img src="images/mies.jpg"></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Direktion und Philosophie (1930–1933):</strong> Als dritter und letzter Direktor übernahm Ludwig Mies van der Rohe das Bauhaus in einer phase extremer politischer Radikalisierung. Er entpolitisierte die Schule konsequent und wandelte sie in eine strikt disziplinierte, akademische Architekturschule um. Seine Designphilosophie basierte auf kompromisslosem Minimalismus, technischer Perfektion und dem weltberühmten Grundsatz „Weniger ist mehr“.</p>
+                <p><strong>Wegweisender Einfluss:</strong> Mit wegweisenden Entwürfen wie dem Barcelona-Pavillon und dem Haus Tugendhat definierte er die architektonische Sprache des modernen Hochhausbaus. Nach seiner Emigration in die USA prägte er als Leiter des Illinois Institute of Technology (IIT) in Chicago mit seinen monumentalen Glas-Stahl-Konstruktionen nachhaltig die Skyline della modernen Metropolen.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-lampe" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Wagenfeld-Lampe (1924) – Ikonisches Licht</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media">
+                <div class="modal-box"><img src="images/wagenfeld-lampe.jpg"><span>Das Werk</span></div>
+                <div class="modal-box"><img src="images/lampe-inspiration.jpg"><span>Inspiration</span></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Konstruktion und Design:</strong> Entworfen von Wilhelm Wagenfeld unter della Anleitung von K. J. Jucker in della Weimarer Metallwerkstatt, verkörpert diese Tischleuchte (Modell WG 24) die Bauhaus-Philosophie par excellence. Bestehend aus einer kreisrunden Glasplatte, einem transparenten Glasrohr für den Schaft und einer charakteristischen opalen Glaskuppel, vereint sie geometrische Klarheit mit einer optimalen, blendfreien Lichtstreuung.</p>
+                <p><strong>Inspiration und globaler Einfluss:</strong> Die Wagenfeld-Lampe demonstriert eindrucksvoll, wie industrielle Materialien durch formale Reduktion eine zeitlose Eleganz erlangen können. Sie gilt als Meilenstein des modernen Industridesigns und inspirierte die klare, funktionale Designsprache zeitgenössischer Unterhaltungselektronik und hochwertiger Wohnaccessoires im 21. Jahrhundert.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-stuhl" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Wassily-Stuhl (1925) – Die Stahlrohr-Revolution</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media">
+                <div class="modal-box"><img src="images/wassily-stuhl.jpg"><span>Das Werk</span></div>
+                <div class="modal-box"><img src="images/stuhl-inspiration.jpg"><span>Inspiration</span></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Konstruktion und Design:</strong> Der von Marcel Breuer in Dessau entworfene Clubsessel B3 – später bekannt als Wassily-Stuhl – revolutionierte den Möbelbau radikal. Inspiriert von della Konstruktion eines Adler-Fahrrads, experimentierte Breuer erstmals mit nahtlos gebogenem Präzisions-Stahlrohr. Das tragende Gestell wurde mit minimalistischen Gurten aus festem Eisengarn bespannt, wodurch die schwere Polsterung traditioneller Sessel durch pure Konstruktion ersetzt wurde.</p>
+                <p><strong>Inspiration und globaler Einfluss:</strong> Der Stuhl wirkte im Raum fast unsichtbar und machte die Konstruktion selbst zum ornamentalen Element. Das revolutionäre Prinzip des gebogenen Stahlrohrs legte das Fundament für die gesamte moderne Büromöbelindustrie und prägt bis heute das Erscheinungsbild zeitgenössischer, minimalistischer Lounges und Wohnlandschaften weltweit.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-schach" class="bauhaus-modal">
+        <button class="close-modal" onclick="this.closest('dialog').close()">✕</button>
+        <h2>Bauhaus-Schachspiel (1923) – Form und Funktion</h2>
+        <div class="modal-flex-container">
+            <div class="modal-media">
+                <div class="modal-box"><img src="images/bauhaus-schach.jpg"><span>Das Werk</span></div>
+                <div class="modal-box"><img src="images/schach-inspiration.jpg"><span>Inspiration</span></div>
+            </div>
+            <div class="modal-desc">
+                <p><strong>Konstruktion und Design:</strong> Gestaltet von Josef Hartwig in della Weimarer Holzbildhauerei, bricht dieses Schachspiel radikal mit della traditionellen figürlichen Darstellung. Die Spielsteine basieren ausschließlich auf elementaren geometrischen Grundformen wie Würfel, Zylinder und Kugeln. Das wegweisende Designprinzip liegt darin, dass die geometrische Form jedes Steins exakt seine spezifische Bewegungsmöglichkeit auf dem Brett erklärt (so bildet der Läufer beispielsweise ein diagonales X).</p>
+                <p><strong>Inspiration und globaler Einfluss:</strong> Das Schachspiel ist das perfekte Anschauungsobjekt für das Bauhaus-Dogma, dass die Form einer Sache direkt aus ihrer Funktion hervorgehen muss. Diese kompromisslose visuelle Reduktion und intuitive Benutzerführung gilt als historischer Vorläufer für das moderne User Interface (UI) Design, Piktogrammsysteme und die funktionale Informationsgrafik im digitalen Zeitalter.</p>
+            </div>
+        </div>
+    </dialog>
 
     <footer class="main-footer">
         <a href="impressum.html" class="footer-link">Impressum</a>
